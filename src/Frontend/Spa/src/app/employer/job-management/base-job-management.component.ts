@@ -14,12 +14,13 @@ export abstract class BaseJobManagementComponent {
     protected router: Router;
     protected updateJobGQL: UpdateJobGQL;
     protected employerJobGQL: EmployerJobGQL;
-    public busy: Boolean;
+    public busy: boolean;
     public job: Job;
 
     constructor() {
         // https://devblogs.microsoft.com/premier-developer/angular-how-to-simplify-components-with-typescript-inheritance/
-        // Manually retrieve the dependencies from the injector so that subclass ctors contain no dependencies that must be passed in from child    
+        // tslint:disable-next-line:max-line-length
+        // Manually retrieve the dependencies from the injector so that subclass ctors contain no dependencies that must be passed in from child
         const injector = AppInjector.getInjector();
         this.router = injector.get(Router);
         this.updateJobGQL = injector.get(UpdateJobGQL);

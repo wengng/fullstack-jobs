@@ -9,7 +9,7 @@ import { ConfigService } from './core/services/config.service';
 export function createApollo(httpLink: HttpLink, authService: AuthService, configService: ConfigService) {
 
   // Workaround "Unrecognized input fields '__typename' for type..." error
-  // https://stackoverflow.com/questions/47211778/cleaning-unwanted-fields-from-graphql-responses/51380645#51380645  
+  // https://stackoverflow.com/questions/47211778/cleaning-unwanted-fields-from-graphql-responses/51380645#51380645
   const cleanTypeName = new ApolloLink((operation, forward) => {
     if (operation.variables) {
       const omitTypename = (key: string, value: any) => (key === '__typename' ? undefined : value);
@@ -23,17 +23,17 @@ export function createApollo(httpLink: HttpLink, authService: AuthService, confi
   const authLink = new ApolloLink((operation, forward) => {
 
      // Get the authentication token from our authService if it exists
-     const token = authService.authorizationHeaderValue; 
+     const token = authService.authorizationHeaderValue;
 
     // Use the setContext method to set the HTTP headers.
-    operation.setContext({
+     operation.setContext({
       headers: {
-        'Authorization': token ? token : ''
+        Authorization: token ? token : ''
       }
     });
 
     // Call the next link in the middleware chain.
-    return forward(operation);
+     return forward(operation);
   });
 
   return {

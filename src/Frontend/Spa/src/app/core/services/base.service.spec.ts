@@ -6,7 +6,8 @@ describe('BaseService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: BaseService = TestBed.get(BaseService);
+    // tslint:disable-next-line: deprecation
+    const service: BaseService = TestBed.inject(BaseService);
     expect(service).toBeTruthy();
   });
 });

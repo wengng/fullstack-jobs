@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { finalize } from 'rxjs/operators'
+import { finalize } from 'rxjs/operators';
 import { JobSummary } from '../../core/models/job-summary';
 import { DialogComponent } from '../../shared/dialog/dialog.component';
 import { MatDialog } from '@angular/material/dialog';
@@ -14,6 +14,7 @@ import { Router } from '@angular/router';
 })
 export class JobsComponent implements OnInit {
 
+  // tslint:disable-next-line:max-line-length
   constructor(private router: Router, private employerJobsGQL: EmployerJobsGQL, private createJobGQL: CreateJobGQL, private dialog: MatDialog) { }
 
   busy = false;
@@ -21,7 +22,7 @@ export class JobsComponent implements OnInit {
 
   createJob() {
     this.createJobGQL.mutate().subscribe((result: { data: { [x: string]: any; }; }) => {
-      let job = result.data['createJob'];
+      const job = result.data['createJob'];
       this.router.navigate(['/employer', 'job', job.id, 'manage', 'basics']);
     });
   }

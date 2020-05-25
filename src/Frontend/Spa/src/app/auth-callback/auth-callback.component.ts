@@ -14,6 +14,6 @@ export class AuthCallbackComponent implements OnInit {
 
   async ngOnInit() {
     await this.authService.completeAuthentication();
-    this.router.navigateByUrl(this.configService.getDefaultRoute(this.authService.role));    
+    this.router.navigateByUrl(this.configService.getDefaultRoute(this.authService.role));
   }
 }

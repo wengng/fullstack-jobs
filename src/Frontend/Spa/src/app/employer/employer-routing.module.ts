@@ -6,7 +6,7 @@ import { AuthGuard } from '../core/authentication/auth.guard';
 
 const routes: Routes = [
     Shell.childRoutes([
-        { path: 'employer/jobs', component: JobsComponent, canActivate: [AuthGuard] }       
+        { path: 'employer/jobs', component: JobsComponent, canActivate: [AuthGuard] }
       ])
     ];
 

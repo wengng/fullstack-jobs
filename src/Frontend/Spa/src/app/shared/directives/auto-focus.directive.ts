@@ -1,6 +1,7 @@
 import { AfterContentInit, Directive, ElementRef, Input } from '@angular/core';
 
 @Directive({
+    // tslint:disable-next-line:directive-selector
     selector: '[autoFocus]'
 })
 export class AutofocusDirective implements AfterContentInit {

@@ -38,6 +38,7 @@ Clone or create a template from this repository.
 Use migrations to create the database as follows:
 
 From the command line use the dotnet CLI to apply the migrations from each project's `Infrastructure` folder.
+0. <code>FullStackJobs.AuthServer.Infrastructure>dotnet tool install -g dotnet-ef</code>
 1. <code>FullStackJobs.AuthServer.Infrastructure> dotnet ef database update --context PersistedGrantDbContext</code>
 2. <code>FullStackJobs.AuthServer.Infrastructure> dotnet ef database update --context AppIdentityDbContext</code>
 3. <code>FullStackJobs.GraphQL.Infrastructure> dotnet ef database update</code>
@@ -46,7 +47,13 @@ From the command line use the dotnet CLI to apply the migrations from each proje
 
 ##### Visual Studio for Windows
 
-Open the `FullStackJobs.sln` solution file which contains both the [AuthServer](https://github.com/mmacneil/fullstack-jobs/tree/master/src/Backend/FullStackJobs.AuthServer) and [GraphQL API](https://github.com/mmacneil/fullstack-jobs/tree/master/src/Backend/FullStackJobs.GraphQL) projects.  You must configure the solution to start up both projects.  Once complete, start the solution in the debugger or use the CLI `dotnet run` command to run them individually.
+Open the `FullStackJobs.sln` solution file which contains both the 
+[AuthServer](https://github.com/mmacneil/fullstack-jobs/tree/master/src/Backend/FullStackJobs.AuthServer) and 
+[GraphQL API](https://github.com/mmacneil/fullstack-jobs/tree/master/src/Backend/FullStackJobs.GraphQL) projects.  
+You must configure the solution to start up both projects.  
+Once complete, start the solution in the debugger or use the CLI `dotnet run` command to run them individually.
+1. <code>FullStackJobs.AuthServer.Infrastructure>dotnet run</code>
+2. <code>FullStackJobs.GraphQL\FullStackJobs.GraphQL.Api>dotnet run</code>
 
 *todo*: Add instructions for VS Code.
 

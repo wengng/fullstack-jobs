@@ -10,11 +10,11 @@ import { jobSummaryFieldsFragment } from '../fragments/job-summary-fields.fragme
 export class EmployerJobsGQL extends Query<JobListResponse> {
   document = gql`
   query FullStackJobsQuery
-  {           
+  {
     employerJobs {
-      ...jobSummaryFields                                  
-    }         
+      ...jobSummaryFields
+    }
   },
-  ${jobSummaryFieldsFragment} 
+  ${jobSummaryFieldsFragment}
   `;
 }

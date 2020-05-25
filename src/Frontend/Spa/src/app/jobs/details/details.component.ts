@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Job } from '../../core/models/job';
 import { ActivatedRoute } from '@angular/router';
-import { finalize } from 'rxjs/operators'
+import { finalize } from 'rxjs/operators';
 import { PublicJobGQL } from '../../core/graphql/queries/public-job.gql';
 import { AuthService } from '../../core/authentication/auth.service';
 
@@ -19,7 +19,7 @@ export class DetailsComponent implements OnInit {
 
   ngOnInit() {
     this.busy = true;
-    this.publicJobGQL.fetch({ id: +this.activatedRoute.snapshot.paramMap.get("id") }, { fetchPolicy: 'network-only' })
+    this.publicJobGQL.fetch({ id: +this.activatedRoute.snapshot.paramMap.get('id') }, { fetchPolicy: 'network-only' })
       .pipe(finalize(() => {
         this.busy = false;
       })).subscribe(result => {

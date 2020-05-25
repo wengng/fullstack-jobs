@@ -23,14 +23,15 @@ export class HeaderComponent implements OnInit, OnDestroy {
   showAccessToken() {
 
     // remove any existing entries
-    document.querySelectorAll('.access-token').forEach(function (a) {
-      a.remove()
+    // tslint:disable-next-line:only-arrow-functions
+    document.querySelectorAll('.access-token').forEach(function(a) {
+      a.remove();
     });
 
-    var token = document.createElement("p");
-    token.className = "access-token";
+    const token = document.createElement('p');
+    token.className = 'access-token';
     token.innerText =  this.authService.authorizationHeaderValue;
-    document.getElementsByClassName("container")[0].insertAdjacentElement('afterbegin', token);    
+    document.getElementsByClassName('container')[0].insertAdjacentElement('afterbegin', token);
   }
 
   async signout() {

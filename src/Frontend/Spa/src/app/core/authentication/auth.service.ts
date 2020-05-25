@@ -20,8 +20,8 @@ export class AuthService extends BaseService {
         client_id: 'angular_spa',
         redirect_uri: 'http://localhost:4200/auth-callback',
         post_logout_redirect_uri: 'http://localhost:4200/',
-        response_type: "code",
-        scope: "openid profile email api.read",
+        response_type: 'code',
+        scope: 'openid profile email api.read',
         filterProtocolClaims: true,
         loadUserInfo: true
     });
@@ -39,9 +39,9 @@ export class AuthService extends BaseService {
 
     login(newAccount?: boolean, userName?: string) {
 
-        let extraQueryParams = newAccount && userName ? {
-            newAccount: newAccount,
-            userName: userName
+        const extraQueryParams = newAccount && userName ? {
+            newAccount,
+            userName
         } : {};
 
         // https://github.com/IdentityModel/oidc-client-js/issues/315
@@ -65,7 +65,7 @@ export class AuthService extends BaseService {
     }
 
     get role(): string {
-        return this.user != null ? this.user.profile["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"] : '';
+        return this.user != null ? this.user.profile['http://schemas.microsoft.com/ws/2008/06/identity/claims/role'] : '';
     }
 
     get name(): string {

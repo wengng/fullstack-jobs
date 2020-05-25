@@ -10,12 +10,12 @@ import { jobFieldsFragment } from '../fragments/job-fields.fragment.gql';
 export class EmployerJobGQL extends Query<JobResponse> {
     document = gql`
   query FullStackJobsQuery($id: Int!)
-  {           
+  {
       job(id: $id) {
         ...jobFields
-        annualBaseSalary                        
-      }            
-  }, 
-  ${jobFieldsFragment} 
+        annualBaseSalary
+      }
+  },
+  ${jobFieldsFragment}
   `;
 }

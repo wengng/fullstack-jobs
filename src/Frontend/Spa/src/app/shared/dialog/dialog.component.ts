@@ -10,6 +10,6 @@ import { DialogData } from './dialog.data';
 export class DialogComponent {
 
   constructor(public dialogRef: MatDialogRef<DialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData) {
+              @Inject(MAT_DIALOG_DATA) public data: DialogData) {
     }
 }

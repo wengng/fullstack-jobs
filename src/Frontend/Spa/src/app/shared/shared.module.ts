@@ -12,8 +12,8 @@ import { DialogComponent } from './dialog/dialog.component';
   declarations: [AutofocusDirective, DialogComponent],
   exports: [AutofocusDirective, MaterialModule, FlexLayoutModule],
   providers: [],
-  entryComponents: [ 
-    DialogComponent    
+  entryComponents: [
+    DialogComponent
   ],
 })
 export class SharedModule { }

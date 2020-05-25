@@ -5,6 +5,7 @@ import { DialogComponent } from '../../shared/dialog/dialog.component';
 import { Router } from '@angular/router';
 
 @Component({
+  // tslint:disable-next-line:component-selector
   selector: 'application-button',
   templateUrl: './application-button.component.html',
   styleUrls: ['./application-button.component.scss']

@@ -1,4 +1,4 @@
-//import { MatOptionModule } from '../material/material.module';
+// import { MatOptionModule } from '../material/material.module';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
 import { MatChipsModule } from '@angular/material/chips';
@@ -15,8 +15,10 @@ import { NgModule } from '@angular/core';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
+    // tslint:disable-next-line:max-line-length
     imports: [MatMenuModule, MatSelectModule, /*MatOptionModule,*/ MatChipsModule, MatExpansionModule, DragDropModule, MatToolbarModule, MatButtonModule, MatInputModule, MatIconModule, MatCardModule, MatProgressSpinnerModule, MatListModule, MatSidenavModule],
+    // tslint:disable-next-line:max-line-length
     exports: [MatMenuModule, MatSelectModule, /*MatOptionModule,*/ MatChipsModule, MatExpansionModule, DragDropModule, MatToolbarModule, MatButtonModule, MatInputModule, MatIconModule, MatCardModule, MatProgressSpinnerModule, MatListModule, MatSidenavModule]
 })
 
-export class MaterialModule { } 
+export class MaterialModule { }

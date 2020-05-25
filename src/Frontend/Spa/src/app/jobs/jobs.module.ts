@@ -7,7 +7,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { SharedModule } from '../shared/shared.module';
 import { ApplicantModule } from '../applicant/applicant.module';
 import { ListComponent } from './list/list.component';
-import { DetailsComponent } from './details/details.component'; 
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [ListComponent, DetailsComponent],

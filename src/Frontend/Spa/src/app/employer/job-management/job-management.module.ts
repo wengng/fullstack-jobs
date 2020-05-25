@@ -8,7 +8,7 @@ import { MaterialModule } from '../../material/material.module';
 import { RootComponent } from './root/root.component';
 import { DescriptionComponent } from './description/description.component';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
-import { SharedModule }   from '../../shared/shared.module';
+import { SharedModule } from '../../shared/shared.module';
 import { ApplicationComponent } from './application/application.component';
 import { TagsComponent } from './tags/tags.component';
 import { PublishComponent } from './publish/publish.component';

@@ -11,8 +11,8 @@ export class CreateApplicationGQL extends Mutation {
     mutation ($input: CreateApplicationInput!) {
         createApplication(input: $input){
            ...jobSummaryFields
-        }                    
+        }
      }
-    ${jobSummaryFieldsFragment}  
+    ${jobSummaryFieldsFragment}
   `;
 }

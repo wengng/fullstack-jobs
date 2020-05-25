@@ -1,4 +1,4 @@
-import { NgModule, Optional, SkipSelf } from '@angular/core'; 
+import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ConfigService } from './services/config.service';
 import { AuthGuard } from './authentication/auth.guard';
@@ -9,10 +9,10 @@ import { AuthGuard } from './authentication/auth.guard';
   declarations: [],
   exports: [],
   providers: [ConfigService, AuthGuard],
-  entryComponents: [     
+  entryComponents: [
   ],
 })
-export class CoreModule { 
+export class CoreModule {
 
   constructor(@Optional() @SkipSelf() parentModule: CoreModule) {
     // Import guard

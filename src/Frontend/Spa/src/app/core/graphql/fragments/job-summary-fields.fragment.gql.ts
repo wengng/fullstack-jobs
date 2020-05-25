@@ -9,6 +9,6 @@ export const jobSummaryFieldsFragment = gql`
     location,
     status,
     modified,
-    applicantCount  
+    applicantCount
   }
 `;

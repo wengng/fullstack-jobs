@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class ConfigService {
 
-    static readonly RESOURCE_BASE_URI = "https://localhost:5025";
-    static readonly AUTH_BASE_URI = "https://localhost:8787";
+    static readonly RESOURCE_BASE_URI = 'https://localhost:5025';
+    static readonly AUTH_BASE_URI = 'https://localhost:8787';
 
     constructor() { }
 
@@ -25,11 +25,11 @@ export class ConfigService {
     }
 
     get resourceApiURI() {
-        return ConfigService.RESOURCE_BASE_URI + "/api";
+        return ConfigService.RESOURCE_BASE_URI + '/api';
     }
 
     get graphqlURI() {
-        return ConfigService.RESOURCE_BASE_URI + "/graphql";
+        return ConfigService.RESOURCE_BASE_URI + '/graphql';
     }
 
 }

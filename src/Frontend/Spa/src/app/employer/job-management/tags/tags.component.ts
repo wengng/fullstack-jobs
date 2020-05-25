@@ -16,9 +16,9 @@ export class TagsComponent extends BaseJobManagementComponent {
   }
 
   addTag() {
-    if (this.tag && this.tag.trim() !== "") {
-      this.job.tags.push(<Tag>{ name: this.tag.toLowerCase() });
-      this.tag = "";
+    if (this.tag && this.tag.trim() !== '') {
+      this.job.tags.push({ name: this.tag.toLowerCase() } as Tag);
+      this.tag = '';
     }
   }
 

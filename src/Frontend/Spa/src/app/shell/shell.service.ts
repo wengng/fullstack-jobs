@@ -14,7 +14,7 @@ export class Shell {
   /**
    * Creates routes using the shell component.
    * @param routes The routes to add.
-   * @return {Route} The new route using shell as the base.
+   * @return { Route } The new route using shell as the base.
    */
   static childRoutes(routes: Routes): Route {
     return {

@@ -6,7 +6,7 @@ import { ApplicationConfirmationComponent } from './application-confirmation/app
 
 const routes: Routes = [
     Shell.childRoutes([
-        { path: 'applicant/confirmation', component: ApplicationConfirmationComponent }       
+        { path: 'applicant/confirmation', component: ApplicationConfirmationComponent }
       ])
     ];
 

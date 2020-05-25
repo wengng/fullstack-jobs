@@ -43,6 +43,7 @@ export class PublishComponent extends BaseJobManagementComponent {
     );
   }
 
+  // tslint:disable-next-line:member-ordering
   statuses: Status[] = [
     { value: 'DRAFT', name: 'Draft' },
     { value: 'PUBLISHED', name: 'Published' },

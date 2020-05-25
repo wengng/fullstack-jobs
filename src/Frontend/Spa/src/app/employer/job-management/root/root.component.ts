@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { finalize } from 'rxjs/operators'
+import { finalize } from 'rxjs/operators';
 import { BaseJobManagementComponent } from '../base-job-management.component';
 
 @Component({
@@ -24,7 +24,8 @@ export class RootComponent extends BaseJobManagementComponent implements OnInit 
   ngOnInit() {
     if (!this.job) {
       this.busy = true;
-      this.employerJobGQL.fetch({ id: +this.activatedRoute.snapshot.paramMap.get("id") }, { fetchPolicy: 'network-only' }).pipe(finalize(() => {
+      // tslint:disable-next-line:max-line-length
+      this.employerJobGQL.fetch({ id: +this.activatedRoute.snapshot.paramMap.get('id') }, { fetchPolicy: 'network-only' }).pipe(finalize(() => {
         this.busy = false;
       })).subscribe(result => {
         this.job = result.data.job;

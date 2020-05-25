@@ -7,7 +7,7 @@ import { Shell } from './../shell/shell.service';
 const routes: Routes = [
 Shell.childRoutes([
     { path: 'signup', component: SignupComponent },
-    { path: 'login', component: LoginComponent }     
+    { path: 'login', component: LoginComponent }
   ])
 ];
 

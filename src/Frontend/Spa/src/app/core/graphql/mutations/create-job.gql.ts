@@ -10,7 +10,7 @@ export class CreateJobGQL extends Mutation {
     mutation ($input:  CreateJobInput) {
         createJob(input: {}){
             id
-        }                    
-     }      
+        }
+     }
   `;
 }

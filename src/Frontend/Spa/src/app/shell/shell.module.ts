@@ -11,7 +11,7 @@ import { HeaderComponent } from './header/header.component';
     CommonModule,
     RouterModule,
     SharedModule
-  ],  
-  declarations: [ShellComponent, HeaderComponent] 
+  ],
+  declarations: [ShellComponent, HeaderComponent]
 })
 export class ShellModule { }

@@ -8,7 +8,7 @@ import gql from 'graphql-tag';
 export class UpdateJobGQL extends Mutation {
     document = gql`
     mutation ($input: UpdateJobInput!) {
-        updateJob(input: $input)                      
-     } 
+        updateJob(input: $input)
+     }
   `;
 }
